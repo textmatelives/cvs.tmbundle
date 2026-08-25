@@ -15,7 +15,7 @@ require 'versioned_file'
 
 tag=`CocoaDialog inputbox --title Merge --informative-text 'Which tag?' --button1 Update --button2 'Cancel'`
 
-accept, tag = *tag.to_a.map {|l| l.chomp}
+accept, tag = *tag.lines.map {|l| l.chomp}
 
 exit unless accept =~ /1/
 
